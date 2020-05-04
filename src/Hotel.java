@@ -6,9 +6,11 @@ public class Hotel {
         Room    room1 = new Room(1,23,10, 21, true),
                 room2 = new Room(2,22,10, 21, false);
 
-        for(int i=0; i<12; i++){
-            room1.getAirConditioner().decreaseTemperature();
-            //room2.getAirConditioner().decreaseTemperature();
-        }
+        System.out.println("Pokój 1 - temperatura początkowa: " + room1.getCurrentTemperature());
+            for(int i=0; i<11; i++){room1.getAirConditioner().decreaseTemperature();}
+        System.out.println("-----\n" +
+                            "Pokój 2 - temperatura początkowa: " + room2.getCurrentTemperature());
+            for(int i=0; i<10; i++){room2.getAirConditioner().decreaseTemperature();}
+
     }
 }
